@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <declare-styleable name="Theme">
+        <attr name="k9998_textViewStyle" format="reference" />
+        <attr name="k9998_cardViewStyle" format="reference" />
+        <attr name="k9998_textAppearanceSmall" format="reference" />
+    </declare-styleable>
+</resources>

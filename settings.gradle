@@ -1,0 +1,3 @@
+rootProject.name = "AndroidStyle"
+include ':app'
+include ':style'
