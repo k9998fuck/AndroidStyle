@@ -1,80 +1,35 @@
 <?xml version="1.0" encoding="utf-8"?>
-<resources xmlns:tools="http://schemas.android.com/tools">
-    <style name="Theme.AndroidStyle1" parent="Theme.AppCompat.Light.DarkActionBar">
+<resources>
+
+    <style name="Theme.k9998.Light.DarkActionBar" parent="Theme.AppCompat.Light.DarkActionBar">
+        <item name="android:textSize">20sp</item>
+        <item name="alertDialogTheme">@style/ThemeOverlay.k9998.Dialog.Alert</item>
+        <item name="alertDialogStyle">@style/AlertDialog.k9998.Light</item>
         <item name="k9998_textViewStyle">@style/k9998.textViewStyle</item>
-        <item name="android:dialogTheme">@style/k9998.alertDialogTheme</item>
-        <item name="android:alertDialogTheme">@style/k9998.alertDialogTheme</item>
-        <item name="alertDialogStyle">@style/k9998.alertDialogStyle</item>
-        <item name="alertDialogTheme">@style/k9998.alertDialogTheme</item>
-        <item name="android:textColorPrimary">#f00</item>
-    </style>
-    <style name="Theme.AndroidStyle2" parent="android:Theme.Black">
     </style>
 
     <style name="k9998.textViewStyle" parent="">
         <item name="android:textColor">#0ff</item>
     </style>
-    <style name="k9998.alertDialogTheme" parent="ThemeOverlay.AppCompat.Dialog.Alert">
 
-        <item name="android:orientation">vertical</item>
-        <item name="android:colorBackgroundCacheHint">@null</item>
-        <item name="android:colorBackground">?attr/colorBackgroundFloating</item>
-
-        <item name="android:windowFrame">@null</item>
-        <item name="android:windowTitleStyle">@style/k9998.windowTitleStyle</item>
-        <item name="android:windowTitleBackgroundStyle">@style/k9998.DialogWindowTitleBackground</item>
-        <item name="android:windowBackground">@mipmap/bg_dialog_title</item>
-        <item name="android:windowIsFloating">true</item>
-        <item name="android:backgroundDimEnabled">true</item>
-        <item name="android:windowContentOverlay">@null</item>
-        <item name="android:windowAnimationStyle">@style/Animation.AppCompat.Dialog</item>
-        <item name="android:windowSoftInputMode">stateUnspecified|adjustPan</item>
-
-        <item name="windowActionBar">false</item>
-        <item name="windowActionModeOverlay">true</item>
-
-        <item name="listPreferredItemPaddingLeft">24dip</item>
-        <item name="listPreferredItemPaddingRight">24dip</item>
-
-        <item name="android:listDivider">@null</item>
-
-        <item name="windowFixedWidthMajor">@null</item>
-        <item name="windowFixedWidthMinor">@null</item>
-        <item name="windowFixedHeightMajor">@null</item>
-        <item name="windowFixedHeightMinor">@null</item>
-
-        <item name="android:buttonBarStyle">@style/k9998.buttonBarStyle</item>
-        <item name="android:borderlessButtonStyle">@style/k9998.borderlessButtonStyle</item>
-        <item name="android:windowCloseOnTouchOutside">true</item>
+    <style name="RtlOverlay.DialogWindowTitle.k9998" parent="RtlOverlay.DialogWindowTitle.AppCompat">
+        <item name="android:textColor">#fff</item>
+        <item name="android:textAlignment">center</item>
     </style>
-    <style name="k9998.DialogWindowTitleBackground" parent="Base.DialogWindowTitleBackground.AppCompat">
-        <item name="android:background">@android:color/white</item>
-        <item name="android:paddingLeft">200dp</item>
-        <item name="android:paddingRight">?attr/dialogPreferredPadding</item>
-        <item name="android:paddingTop">500dp</item>
+
+    <style name="Widget.k9998.Button.ButtonBar.AlertDialog" parent="Widget.AppCompat.Button.ButtonBar.AlertDialog">
+        <item name="android:background">@drawable/k9998_btn_borderless_material</item>
+        <item name="android:textColor">#fff</item>
     </style>
-    <style name="k9998.windowTitleStyle" parent="RtlOverlay.DialogWindowTitle.AppCompat">
-        <item name="android:background">@android:color/white</item>
+
+    <style name="ThemeOverlay.k9998.Dialog.Alert" parent="ThemeOverlay.AppCompat.Dialog.Alert">
+        <item name="dialogCornerRadius">3dp</item>
+        <item name="android:windowTitleStyle">@style/RtlOverlay.DialogWindowTitle.k9998</item>
+        <item name="buttonBarButtonStyle">@style/Widget.k9998.Button.ButtonBar.AlertDialog</item>
     </style>
-    <style name="k9998.buttonBarStyle" parent="Widget.AppCompat.ButtonBar.AlertDialog">
-        <item name="android:background">@mipmap/bottom_button_bg_disable</item>
-        <item name="android:orientation">vertical</item>
+
+    <style name="AlertDialog.k9998.Light" parent="AlertDialog.AppCompat.Light">
+        <item name="android:layout">@layout/k9998_alert_dialog_material</item>
     </style>
-    <style name="k9998.borderlessButtonStyle" parent="Widget.AppCompat.Button.Borderless">
-        <item name="android:background">@mipmap/bottom_button_bg_disable</item>
-        <item name="android:textAppearance">?android:attr/textAppearanceButton</item>
-        <item name="android:minHeight">48dip</item>
-        <item name="android:minWidth">88dip</item>
-        <item name="android:focusable">true</item>
-        <item name="android:clickable">true</item>
-        <item name="android:gravity">center_vertical|center_horizontal</item>
-    </style>
-    <style name="k9998.alertDialogStyle" parent="AlertDialog.AppCompat.Light">
-        <item name="android:layout">@layout/abc_alert_dialog_material</item>
-        <item name="listLayout">@layout/abc_select_dialog_material</item>
-        <item name="listItemLayout">@layout/select_dialog_item_material</item>
-        <item name="multiChoiceItemLayout">@layout/select_dialog_multichoice_material</item>
-        <item name="singleChoiceItemLayout">@layout/select_dialog_singlechoice_material</item>
-        <item name="buttonIconDimen">@dimen/abc_alert_dialog_button_dimen</item>
-    </style>
+
 </resources>
