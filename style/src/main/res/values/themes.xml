@@ -1,15 +1,43 @@
 <?xml version="1.0" encoding="utf-8"?>
-<resources>
+<resources xmlns:tools="http://schemas.android.com/tools">
 
     <style name="Theme.k9998.Light.DarkActionBar" parent="Theme.AppCompat.Light.DarkActionBar">
+        <!-- Primary brand color. -->
+        <item name="colorPrimary">#000</item>
+        <item name="colorPrimaryVariant">#000</item>
+        <item name="colorOnPrimary">#fff</item>
+        <!-- Secondary brand color. -->
+        <item name="colorSecondary">#111</item>
+        <item name="colorSecondaryVariant">#111</item>
+        <item name="colorOnSecondary">#fff</item>
+        <!--  -->
+        <item name="colorAccent">#666</item>
+        <!-- Status bar color. -->
+        <item name="android:statusBarColor" tools:targetApi="l">?attr/colorPrimaryVariant</item>
+        <!-- Customize your theme here. -->
+
         <item name="android:textSize">20sp</item>
+        <item name="android:editTextBackground">@drawable/k9998_edit_text</item>
+        <item name="android:editTextStyle">@style/Widget.k9998.EditText</item>
+        <item name="editTextStyle">@style/Widget.k9998.EditText</item>
+        <item name="android:buttonStyle">@style/Widget.k9998.Button</item>
         <item name="alertDialogTheme">@style/ThemeOverlay.k9998.Dialog.Alert</item>
         <item name="alertDialogStyle">@style/AlertDialog.k9998.Light</item>
+        <item name="tabStyle">@style/Widget.k9998.TabLayout</item>
         <item name="k9998_textViewStyle">@style/k9998.textViewStyle</item>
     </style>
 
     <style name="k9998.textViewStyle" parent="">
         <item name="android:textColor">#0ff</item>
+    </style>
+
+    <style name="Widget.k9998.EditText" parent="Widget.AppCompat.EditText">
+        <item name="android:padding">10dp</item>
+    </style>
+
+    <style name="Widget.k9998.Button" parent="Widget.AppCompat.Button">
+        <item name="android:background">@drawable/k9998_btn_borderless_material</item>
+        <item name="android:textColor">#fff</item>
     </style>
 
     <style name="RtlOverlay.DialogWindowTitle.k9998" parent="RtlOverlay.DialogWindowTitle.AppCompat">
@@ -30,6 +58,17 @@
 
     <style name="AlertDialog.k9998.Light" parent="AlertDialog.AppCompat.Light">
         <item name="android:layout">@layout/k9998_alert_dialog_material</item>
+    </style>
+
+    <style name="Widget.k9998.TabLayout" parent="android:Widget">
+        <item name="android:background">@drawable/k9998_tab_bg</item>
+        <item name="tabMinWidth">200dp</item>
+        <item name="tabIndicatorGravity">stretch</item>
+        <item name="tabIndicatorAnimationMode">fade</item>
+        <item name="tabIndicator">@drawable/k9998_tab_indicator_selected</item>
+        <item name="tabTextColor">#000</item>
+        <item name="tabSelectedTextColor">#fff</item>
+        <item name="tabMode">fixed</item>
     </style>
 
 </resources>
